@@ -1,4 +1,4 @@
-package com.fatapps.cleaner;
+package com.fatapps.fucker;
 
 import android.content.ContentProvider;
 import android.content.ContentValues;

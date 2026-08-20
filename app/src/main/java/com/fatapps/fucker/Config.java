@@ -1,4 +1,4 @@
-package com.fatapps.cleaner;
+package com.fatapps.fucker;
 
 import android.content.Context;
 import android.content.SharedPreferences;
@@ -9,7 +9,7 @@ import java.util.concurrent.atomic.AtomicReference;
 
 /** Shared configuration for the module UI and the hooked target process. */
 public final class Config {
-    public static final String PREFS = "cleaner_preferences";
+    public static final String PREFS = "fucker_preferences";
     public static final String KEY_ENABLED = "enabled";
     public static final String KEY_SKIP_SPLASH_AD = "skip_splash_ad";
     public static final String KEY_HIDE_BANNER = "hide_banner";
@@ -18,7 +18,7 @@ public final class Config {
     public static final String KEY_HIDE_AI_TAB = "hide_ai_tab";
     public static final String KEY_HIDE_MINE_TAIL = "hide_mine_tail";
 
-    public static final Uri CONFIG_URI = Uri.parse("content://com.fatapps.cleaner.config/config");
+    public static final Uri CONFIG_URI = Uri.parse("content://com.fatapps.fucker.config/config");
 
     private static final AtomicReference<Flags> CACHED_TARGET_FLAGS = new AtomicReference<>();
 
@@ -35,10 +35,10 @@ public final class Config {
                 preferences.getBoolean(KEY_ENABLED, true),
                 preferences.getBoolean(KEY_SKIP_SPLASH_AD, true),
                 preferences.getBoolean(KEY_HIDE_BANNER, true),
-                preferences.getBoolean(KEY_SUPPRESS_BANNER_INIT, false),
-                preferences.getBoolean(KEY_HIDE_HOME_TODAY, false),
-                preferences.getBoolean(KEY_HIDE_AI_TAB, false),
-                preferences.getBoolean(KEY_HIDE_MINE_TAIL, false)
+                preferences.getBoolean(KEY_SUPPRESS_BANNER_INIT, true),
+                preferences.getBoolean(KEY_HIDE_HOME_TODAY, true),
+                preferences.getBoolean(KEY_HIDE_AI_TAB, true),
+                preferences.getBoolean(KEY_HIDE_MINE_TAIL, true)
         );
     }
 
@@ -102,7 +102,7 @@ public final class Config {
         }
 
         public static Flags defaults() {
-            return new Flags(true, true, true, false, false, false, false);
+            return new Flags(true, true, true, true, true, true, true);
         }
 
         public static Flags fromBundle(Bundle bundle) {
@@ -113,10 +113,10 @@ public final class Config {
                     bundle.getBoolean(KEY_ENABLED, true),
                     bundle.getBoolean(KEY_SKIP_SPLASH_AD, true),
                     bundle.getBoolean(KEY_HIDE_BANNER, true),
-                    bundle.getBoolean(KEY_SUPPRESS_BANNER_INIT, false),
-                    bundle.getBoolean(KEY_HIDE_HOME_TODAY, false),
-                    bundle.getBoolean(KEY_HIDE_AI_TAB, false),
-                    bundle.getBoolean(KEY_HIDE_MINE_TAIL, false)
+                    bundle.getBoolean(KEY_SUPPRESS_BANNER_INIT, true),
+                    bundle.getBoolean(KEY_HIDE_HOME_TODAY, true),
+                    bundle.getBoolean(KEY_HIDE_AI_TAB, true),
+                    bundle.getBoolean(KEY_HIDE_MINE_TAIL, true)
             );
         }
 

@@ -1,4 +1,4 @@
-package com.fatapps.cleaner.hook;
+package com.fatapps.fucker.hook;
 
 /** Original clean AMap quick-tool icons, embedded so AJX promo badges need not be masked. */
 final class CleanIconData {

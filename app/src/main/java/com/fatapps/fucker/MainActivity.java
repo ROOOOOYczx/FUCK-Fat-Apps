@@ -1,4 +1,4 @@
-package com.fatapps.cleaner;
+package com.fatapps.fucker;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -18,7 +18,7 @@ import android.widget.Switch;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.fatapps.cleaner.Config.Flags;
+import com.fatapps.fucker.Config.Flags;
 
 import java.io.File;
 
@@ -51,7 +51,7 @@ public final class MainActivity extends Activity {
         page.setPadding(dp(20), dp(20), dp(20), dp(32));
         scroll.addView(page, new ScrollView.LayoutParams(-1, -2));
 
-        TextView title = text("FUCK Fat Apps", 28, Color.rgb(28, 36, 48), true);
+        TextView title = text("Fat Apps Fucker", 28, Color.rgb(28, 36, 48), true);
         page.addView(title, params(-1, -2));
         TextView subtitle = text("LSPosed 应用净化模块", 14, Color.rgb(107, 116, 128), false);
         page.addView(subtitle, params(-1, -2));
@@ -70,10 +70,10 @@ public final class MainActivity extends Activity {
         amapCard.addView(space(8));
         splashSwitch = addSwitch(amapCard, "跳过启动页广告", "拦截高德启动页广告生命周期；地图主体不受影响", Config.KEY_SKIP_SPLASH_AD, true);
         bannerSwitch = addSwitch(amapCard, "隐藏推广横幅 / Banner", "隐藏高德 Banner 视图，可能影响部分非广告横幅", Config.KEY_HIDE_BANNER, true);
-        bannerInitSwitch = addSwitch(amapCard, "阻止 Banner 初始化（实验）", "阻止 Banner 管理器初始化，适合希望更彻底净化的场景", Config.KEY_SUPPRESS_BANNER_INIT, false);
-        homeTodaySwitch = addSwitch(amapCard, "精简首页内容", "保留搜索栏、15 个工具、路线卡片和常用地点；移除天气及以下内容", Config.KEY_HIDE_HOME_TODAY, false);
-        aiTabSwitch = addSwitch(amapCard, "移除 AI 长按对话入口", "移除底部中间的“长按说话”按钮", Config.KEY_HIDE_AI_TAB, false);
-        mineTailSwitch = addSwitch(amapCard, "精简“我的”页", "隐藏“借钱”入口，并移除“达人任务”及其下方内容", Config.KEY_HIDE_MINE_TAIL, false);
+        bannerInitSwitch = addSwitch(amapCard, "阻止 Banner 初始化（实验）", "阻止 Banner 管理器初始化，适合希望更彻底净化的场景", Config.KEY_SUPPRESS_BANNER_INIT, true);
+        homeTodaySwitch = addSwitch(amapCard, "精简首页内容", "保留搜索栏、15 个工具、路线卡片和常用地点；移除天气及以下内容", Config.KEY_HIDE_HOME_TODAY, true);
+        aiTabSwitch = addSwitch(amapCard, "移除 AI 长按对话入口", "移除底部中间的“长按说话”按钮", Config.KEY_HIDE_AI_TAB, true);
+        mineTailSwitch = addSwitch(amapCard, "精简“我的”页", "隐藏“借钱”入口，并移除“达人任务”及其下方内容", Config.KEY_HIDE_MINE_TAIL, true);
         page.addView(amapCard, params(-1, -2));
 
         page.addView(sectionTitle("使用说明"), params(-1, -2));
@@ -162,7 +162,7 @@ public final class MainActivity extends Activity {
     private void openAppDetails() {
         try {
             Intent intent = new Intent(Settings.ACTION_APPLICATION_DETAILS_SETTINGS);
-            intent.setData(Uri.parse("package:com.fatapps.cleaner"));
+            intent.setData(Uri.parse("package:com.fatapps.fucker"));
             startActivity(intent);
         } catch (Throwable ignored) {
             Toast.makeText(this, "请在 LSPosed 中手动启用模块", Toast.LENGTH_LONG).show();

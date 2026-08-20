@@ -1,4 +1,4 @@
-package com.fatapps.cleaner.hook;
+package com.fatapps.fucker.hook;
 
 import android.app.Application;
 import android.content.Context;
@@ -17,8 +17,8 @@ import android.view.accessibility.AccessibilityNodeInfo;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.fatapps.cleaner.Config;
-import com.fatapps.cleaner.Config.Flags;
+import com.fatapps.fucker.Config;
+import com.fatapps.fucker.Config.Flags;
 
 import java.lang.reflect.Method;
 import java.lang.reflect.Modifier;
@@ -38,7 +38,7 @@ import de.robv.android.xposed.callbacks.XC_LoadPackage.LoadPackageParam;
 /** LSPosed entry point. Hooks are deliberately scoped to AMap's package. */
 public final class MainHook implements IXposedHookLoadPackage {
     private static final String TARGET_PACKAGE = "com.autonavi.minimap";
-    private static final String TAG = "[FUCK Fat Apps] ";
+    private static final String TAG = "[Fat Apps Fucker] ";
     private static final String MIRRORED_PREFS = "fatapps_cleaner_mirrored_preferences";
     private static final String MIRRORED_PREFS_VERSION = "_mirror_version";
     private static volatile boolean installed;

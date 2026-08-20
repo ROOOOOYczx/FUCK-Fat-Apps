@@ -21,7 +21,7 @@
         <!-- Read-only bridge used by the hooked target process. -->
         <provider
             android:name=".ConfigProvider"
-            android:authorities="com.fatapps.cleaner.config"
+            android:authorities="com.fatapps.fucker.config"
             android:exported="true"
             android:grantUriPermissions="false" />
 
@@ -30,7 +30,7 @@
             android:value="true" />
         <meta-data
             android:name="xposeddescription"
-            android:value="FUCK Fat Apps：可配置的应用广告与推广组件屏蔽模块" />
+            android:value="Fat Apps Fucker：可配置的应用广告与推广组件屏蔽模块" />
         <meta-data
             android:name="xposedminversion"
             android:value="82" />
