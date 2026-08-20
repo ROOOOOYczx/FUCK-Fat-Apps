@@ -1,0 +1,9 @@
+.gradle/
+build/
+app/build/
+.tools/
+.gradle-home/
+.android-home/
+amap-apktool/
+amap-installed-apktool/
+amap-installed-base.apk

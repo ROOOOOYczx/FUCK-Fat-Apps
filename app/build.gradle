@@ -1,0 +1,31 @@
+plugins {
+    id "com.android.application"
+}
+
+android {
+    namespace "com.fatapps.cleaner"
+    compileSdk 35
+    buildToolsVersion "35.0.0"
+
+    defaultConfig {
+        applicationId "com.fatapps.cleaner"
+        minSdk 26
+        targetSdk 35
+        versionCode 1
+        versionName "0.1.0"
+    }
+
+    buildFeatures {
+        buildConfig = false
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+}
+
+dependencies {
+    // Compile-time only. The classes are supplied by LSPosed at runtime.
+    compileOnly files("libs/api-82.jar")
+}
